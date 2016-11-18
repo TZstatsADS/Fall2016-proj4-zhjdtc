@@ -1,6 +1,6 @@
 # Fall2016-proj4-zhjdtc
-Fall2016-proj4-zhjdtc created by GitHub Classroom
-Topic Words of Music
+
+**Topic Words of Music**
   In this project, we use 2350 songs to produce a model so that whenwe have new 100 songs, we could predict those songs' lyrics based on 
 their features.
   Data: 2350 songs' features(analysis) and words' frequencies in each lyric.
