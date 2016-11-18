@@ -56,8 +56,8 @@ for(i in 1:100){
   test.ranking[i,]=rank(test.result[i,])
   
 }
-
-write.xlsx(test.ranking,"~/Dropbox/Jingdan/Applied Data Science/Project 4/100song ranking.txt",sep="\t")
+#output as txt document
+write.table(test.ranking,"~/Dropbox/Jingdan/Applied Data Science/Project 4/100song ranking.txt",sep="\t")
 
 
 
