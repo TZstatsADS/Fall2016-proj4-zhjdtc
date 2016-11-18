@@ -10,3 +10,17 @@ prediction=predict(fit2,test,s="lambda.min")
 prob=prediciton %*% phi
 result=1-prob
 ranking=rank(result)
+
+
+##use distance to find the test data close to which song
+pitches.dist=rep(0,2350)
+
+for (i in 1:2350){
+  di=dist(rbind(pitches.feature[i,],test.pitches))
+  pitches.dist[i]=di
+  
+
+}
+
+pitches.index.min=which.min(pitches.dist)
+
