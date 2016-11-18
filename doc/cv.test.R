@@ -72,6 +72,11 @@ for (i in 1:100){
   mean2_lasso[i]=mean(ranking2_lasso[i,index])
   
 }
-
+##compare two model and results are interesting
+##First I use 2000 songs as train and Lasso works better with very little advantage
+##Then I use 2250 songs as train and 100 songs as test, then Ridge has mean about 619 while Lasso has mean around 640. Ridge works better than Lass
+##This may be the reason ridge has closed form and more stable for small changes in X and Y while Lasso is not stable.
+mean(mean2_ridge)
+mean(mean2_lasso)
 
 
