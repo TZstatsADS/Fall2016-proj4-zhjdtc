@@ -43,3 +43,16 @@ fit=lda.collapsed.gibbs.sampler(documents=document,K=K,vocab=vocab,
 
 theta=t(apply(fit$document_sums+alpha,2,function(x) x/sum(x)))   #distribution of each songs in 20 topics
 phi=t(apply(t(fit$topics)+eta,2,function(x) x/sum(x)))    #distribution of each topics in 5000 word
+
+  
+  
+  
+  ##visulization of topic model
+musicreview=list(phi=phi,theta=theta,doc.lenght=doc.length, vocab=vocab, term.frequency=term.frequency)
+
+library(LDAvis)
+json=createJSON(phi=musicreview$phi,theta=musicreview$theta,doc.length=musicreview$doc.lenght,
+                vocab=musicreview$vocab,term.frequency = musicreview$term.frequency)
+
+serVis(json,out.dir="vis2",open.browser = F)
+
